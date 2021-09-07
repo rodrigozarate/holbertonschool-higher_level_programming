@@ -6,9 +6,8 @@ def uppercase(str):
         ascii = ord(str[i])
 
         if (ascii >= ord('a') and
-            ascii <= ord('z')):
+           ascii <= ord('z')):
             modified_str += chr(ascii - 32)
-
         else:
             modified_str += str[i]
 
