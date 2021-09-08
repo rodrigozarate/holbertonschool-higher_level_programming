@@ -2,7 +2,7 @@
 def uppercase(str):
 
     modified_str = ""
-    for i in range(0, len(str)):
+    for i in str:
         ascii = ord(str[i])
 
         if (ascii >= ord('a') and
