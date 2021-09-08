@@ -11,5 +11,4 @@ def uppercase(str):
         else:
             modified_str += i
 
-    print(modified_str)
-
+    print(modified_str, end="")
