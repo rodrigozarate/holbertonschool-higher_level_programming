@@ -8,4 +8,4 @@ if __name__ == "__main__":
 
     ordered_names = sorted(unordered_names)
     for reorder in ordered_names:
-        print(reorder)
+        print("{}".format(reorder))
