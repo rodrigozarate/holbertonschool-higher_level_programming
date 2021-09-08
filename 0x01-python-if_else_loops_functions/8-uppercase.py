@@ -12,3 +12,4 @@ def uppercase(str):
             modified_str += i
 
     print(modified_str)
+
