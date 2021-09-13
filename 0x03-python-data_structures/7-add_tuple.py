@@ -6,7 +6,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     if tuple_a_length == 0:
         tozero1a = 0
         tozero2a = 0
-    
+
     if tuple_b_length == 0:
         tozero1b = 0
         tozero2b = 0
@@ -14,7 +14,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     if tuple_a_length == 1:
         tozero1a = tuple_a[0]
         tozero2a = 0
-    
+
     if tuple_b_length == 1:
         tozero1b = tuple_a[0]
         tozero2b = 0
