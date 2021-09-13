@@ -6,4 +6,4 @@ def no_c(my_string):
             if i == 'c' or i == 'C':
                 i = ''
             cutted += i
-    return(cutted)
+        return(cutted)
