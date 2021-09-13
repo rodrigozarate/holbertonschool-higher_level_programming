@@ -4,6 +4,6 @@ def multiple_returns(sentence):
     if howlong > 1:
         first = sentence[0]
     else:
-        first = None
+        first = "None"
 
     return(howlong, first)
