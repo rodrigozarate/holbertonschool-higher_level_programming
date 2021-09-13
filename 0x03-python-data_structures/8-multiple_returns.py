@@ -6,4 +6,4 @@ def multiple_returns(sentence):
     else:
         first = None
 
-    return(tuple(howlong, first))
+    return(howlong, first)
