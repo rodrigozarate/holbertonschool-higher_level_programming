@@ -13,25 +13,24 @@ def roman_to_int(roman_string):
        99 must be constructed XCIX"""
 
     romans_dic = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+    valid_pair = ['I','X','C','M']
+    if not roman_string or not isinstance(roman_string, str):
+        return 0
 
+    # at least is string and is not None
     sum = 0
     howmany = len(roman_string)
 
-    if howmany == 0:
-        # no string
-        return 0
     if howmany == 1:
         # do simple replace
-        if i in romans_dic:
-            print(romans_dic[i])
-            return romans_dic[i]
+        if roman_string in romans_dic:
+            return romans_dic[roman_string]
         else:
             # malformed number
             return 0
 
     if howmany == 2:
         # check for valid pairs
-
         # sum
         if roman_string[0] in romans_dic:
             a = romans_dic[roman_string[0]]
@@ -46,28 +45,37 @@ def roman_to_int(roman_string):
             # malformed number
 
         # both numbers exists at this point
-        if a >= b:
+        if a > b:
             sum = a + b
-            print(sum)
+        elif a == b:
+            #Check that is in valid pair 1 10 100 1000
+            if roman_string[0] in valid_pair:
+                sum = a + b
+            else:
+                return 0
         else:
             # check for malformed pairs
             # substract
             sum = b - a
-            print(sum)
 
     if howmany > 2:
         # check that no more than 3 repetitions occur
-        print(howmany)
 
-        for a in range(len(roman_string)):
+        for x in range(len(roman_string)):
         # multiple checks
-            sum += romans_dic[roman_string[a]]
+            # all except last char
+            if x < len(roman_string) - 1:
+                if romans_dic[roman_string[x]] < romans_dic[roman_string[x + 1]]:
+                    # must substract 
+                    # must verify is valid 
+                    sum -= romans_dic[roman_string[x]]
+                elif romans_dic[roman_string[x]] == romans_dic[roman_string[x + 1]]:
+                    if roman_string[x] in  valid_pair:
+                        # all fine add
+                        sum += romans_dic[roman_string[x]]
+                else:
+                    sum += romans_dic[roman_string[x]]
+        # last number
+        sum += romans_dic[roman_string[x]]
 
-        for key in romans_dic:
-            print("{}: {}".format(key, romans_dic[key]))
-    
-    print(sum)
     return sum
-
-i = 'LL'
-roman_to_int(i) 
