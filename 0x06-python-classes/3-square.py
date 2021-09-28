@@ -2,7 +2,6 @@
 """ Module Square """
 
 
-
 class Square:
     """ Define a square by size """
 
