@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+""" Module Square """
+
 class Square():
-    """ This class create a rectangle """
+    """ This class will create a rectangle """
     
     def __init__(self, size):
 
