@@ -45,5 +45,5 @@ class Square:
         if value[0] < 0 or value[1] < 0:
             raise TypeError(msg)
         if type(value[0]) != int or type(value[1]) != int:
-            raise TypeError( msg)
-        self.__position = value
+            raise TypeError(msg)
+        self.__position = valuei
