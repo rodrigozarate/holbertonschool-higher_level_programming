@@ -1,3 +1,5 @@
 #!/usr/bin/python3
+""" Module Square """
+
 class Square(object):
-''' This class create a rectangle '''
+    """ This class will create a rectangle """
