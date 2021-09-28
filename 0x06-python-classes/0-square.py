@@ -3,3 +3,4 @@
 
 class Square(object):
     """ This class will create a rectangle """
+    pass
