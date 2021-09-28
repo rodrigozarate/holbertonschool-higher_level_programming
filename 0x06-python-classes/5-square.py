@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-    """ Create a Square """
+""" Module Square """
+
+
 class Square:
     """ Define a square by size """
     def __init__(self, size=0):
@@ -21,7 +23,7 @@ class Square:
         else:
             self.__size = value
 
-    def my_print(self)
+    def my_print(self):
         if self.__size == 0:
             print()
         else:
