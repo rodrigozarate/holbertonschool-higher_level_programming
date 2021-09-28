@@ -1,7 +1,13 @@
 #!/usr/bin/python3
-    """ Create a Square """
+""" Module Square """
+
+
 class Square:
-    """ Define a square by size """
+    """ Define a square by size
+
+        Attributes:
+            size (int): side of square
+    """
     def __init__(self, size=0):
         self.__size = size
 
