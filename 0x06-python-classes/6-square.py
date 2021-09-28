@@ -46,4 +46,4 @@ class Square:
             raise TypeError(msg)
         if type(value[0]) != int or type(value[1]) != int:
             raise TypeError(msg)
-        self.__position = valuei
+        self.__position = value
