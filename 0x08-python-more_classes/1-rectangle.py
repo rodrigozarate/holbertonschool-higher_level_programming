@@ -4,36 +4,27 @@
 
 class Rectangle:
     """ Rectangle Class """
-    pass
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
 
-@attribute
-width:
+    @property 
+    def width(self):
 
-@property 
-def width(self):
-TypeError
-height must be an integer
-ValueError
-height must be >= 0
+    @width.setter
+    def width(self, value):
+        TypeError
+        width must be an integer
+        ValueError
+        width must be >= 0
 
-def width(self, value):
+    @property
+    def height(self):
 
-@attribute
-height:
+    @height.setter
+    def height(self, value):
+        TypeError
+        height must be an integer
+        ValueError
+        height must be >= 0
 
-@property
-def height(self):
-TypeError
-height must be an integer
-ValueError
-height must be >= 0
-
-def height(self, value):
-
-def __init__(self, width=0, height=0):
-
-def area(self):
-
-def perimeter(self):
-if width == 0 or height == 0:
-perimeter is equal to 0
