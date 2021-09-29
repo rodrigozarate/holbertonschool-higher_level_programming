@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-"""
-    Module Rectangle
-
-    """
+""" Module Rectangle """
 
 
 class Rectangle:
-    """ Rectangle Class """
+    """
+        Rectangle Class
+
+        Attribute:
+            width (int): Private
+            height (int): Private
+
+    """
     def __init__(self, width=0, height=0):
         """ Init Rectangle Class
 
