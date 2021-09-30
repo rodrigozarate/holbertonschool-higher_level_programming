@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Class Rectangle"""
+"""Class Rectangle not empty"""
 
 
 class Rectangle:
-    """Rectangle Class"""
+    """Rectangle Class empty"""
+
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
