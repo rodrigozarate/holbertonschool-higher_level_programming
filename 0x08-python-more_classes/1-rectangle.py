@@ -7,14 +7,17 @@ class Rectangle:
     dict
 
     def __init__(self, width=0, height=0):
+        """Something goes here"""
         self.height = height
         self.width = width
 
     @property
+    """Something goes here"""
     def height(self):
         return self._height
 
     @height.setter
+    """Something goes here"""
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -23,10 +26,12 @@ class Rectangle:
         self.__height = value
 
     @property
+    """Something goes here"""
     def width(self):
         return self.__width
 
     @width.setter
+    """Something goes here"""
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
