@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Module Rectangle """
+""" Module Rectangle not empty """
 
 
 class Rectangle:
-    """ class Rectangle """
+    """ class Rectangle empty """
 
     def __init__(self, width=0, height=0):
         self.height = height
