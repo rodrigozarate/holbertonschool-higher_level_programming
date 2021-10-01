@@ -66,7 +66,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return Rectangle(size, size)
+        """ square Rectangle """
+        return cls(size, size)
  
     def __del__(self):
         type(self).number_of_instances -= 1
