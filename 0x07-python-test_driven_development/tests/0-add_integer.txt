@@ -1,0 +1,8 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> x = __import__("0-add_integer").__doc__
+>>> len(x) > 1
+True
+
+>>> add_integer(2, 2)
+4
