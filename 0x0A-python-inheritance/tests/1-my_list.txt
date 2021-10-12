@@ -1,0 +1,26 @@
+>>> MyList = __import__("1-my_list").MyList
+
+>>> doc = __import__("1-my_list").__doc__
+>>> len(doc) > 1
+True
+
+>>> doc = __import__("1-my_list").Mylist.__doc__
+>>> len(doc) > 1
+True
+
+>>> empty = MyList()
+>>> empty.print_sorted()
+[]
+
+>>> issubclass(MyList, list)
+True
+
+>>> list = MyList()
+>>> list.append(1)
+>>> list.append(2)
+>>> list.append(3)
+>>> print(list)
+[1, 2, 3]
+
+>>> list.print_sorted()
+[1, 2, 3]
