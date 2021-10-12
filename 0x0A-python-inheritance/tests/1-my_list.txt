@@ -4,8 +4,8 @@
 >>> len(doc) > 1
 True
 
->>> doc = __import__("1-my_list").Mylist.__doc__
->>> len(doc) > 1
+>>> doc2 = __import__("1-my_list").Mylist.__doc__
+>>> len(doc2) > 1
 True
 
 >>> empty = MyList()
