@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 """ Add all arguments to a Python list """
+import sys
 
 
-save_to_json_file = __import__('').save_to_json_file
-load_from_json_file = __import('').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import('6-load_from_json_file').load_from_json_file
+
+open("add_item.json", "a")
+myfile = load_from_json_file("add_item.json")
+save_to_json_file(myfile + sys.argv[1:], "add_item.json")
