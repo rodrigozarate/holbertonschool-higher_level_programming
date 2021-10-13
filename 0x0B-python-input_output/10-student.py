@@ -13,6 +13,6 @@ class Student():
     def to_json(self, attrs=None):
         """ to json implementation """
         if type(attrs) is list and all([type(x) == str for x in attrs]):
-            return {key: value for key, value \
-                in self.__dict__.items() if key in attrs}
+            return {key: value for key, value
+                    in self.__dict__.items() if key in attrs}
         return self.__dict__
