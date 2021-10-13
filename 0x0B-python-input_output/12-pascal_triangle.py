@@ -9,7 +9,7 @@ def pascal_triangle(n):
 
     i = 1
     base = 1
-    while i <  n+1:
+    while i < n + 1:
         items = i + 1
         """ pascal formula """
         """ (x + y)^n """
