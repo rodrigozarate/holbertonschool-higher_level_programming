@@ -4,12 +4,12 @@
 
 class Base:
     """ Class Base """
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """ definition of instance atributes """
-        self.__nb_objects = 0
-        if not self.id == None:
-            self.id = self.id
-        else
-            self.__nb_objects += 1
-            self.id = __nb_objects
+        if not id == None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
