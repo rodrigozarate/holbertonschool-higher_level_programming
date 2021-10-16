@@ -63,3 +63,6 @@ class Rectangle(Base):
     """ public method AREA """
     def area(self):
         return self.height * self.width
+
+    def display(self):
+        print((self.__width * "#" + "\n") * self.__height)[:-1]
