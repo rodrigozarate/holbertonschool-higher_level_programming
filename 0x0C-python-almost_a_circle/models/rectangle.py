@@ -65,4 +65,4 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
-        print((self.__width * "#" + "\n") * self.__height)[:-1]
+        print(((self.__width * "#" + "\n") * self.__height)[:-1])
