@@ -4,10 +4,6 @@
 
 class Rectangle(Base):
     """ Class Rectangle inherits from Base """
-    __width -> width
-    __height -> height
-    __x -> x
-    __y -> y
 
     def __init__(self, width, height, x=0, y=0, id=None)
         self.__width = width
@@ -22,3 +18,27 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         self._width = value
+
+    @property
+    def height(self):
+        return self._height
+
+    @height.setter
+    def height(self, value):
+        self._height = value
+
+    @property
+    def x(self):
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        self._x = value
+
+    @property
+    def y(self):
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        self._y = value
