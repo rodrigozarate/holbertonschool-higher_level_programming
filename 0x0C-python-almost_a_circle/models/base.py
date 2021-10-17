@@ -33,7 +33,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if not json_string:
-            return "[]"
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -45,3 +45,11 @@ class Base:
         new_rectangle.update(**dictionary)
         return(new_rectangle)
 
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__ + ".json", "r") as file:
+                return [cls.create(**dictionary) for dictionary
+                        in cls.from_json_string(file.read())]
+        except FileNotFoundError:
+            return []
