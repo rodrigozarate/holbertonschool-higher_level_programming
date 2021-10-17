@@ -95,4 +95,5 @@ class Rectangle(Base):
                 setattr(self, arg, keywords.get(arg))
 
     def to_dictionary(self):
-        return self.__dict__
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
