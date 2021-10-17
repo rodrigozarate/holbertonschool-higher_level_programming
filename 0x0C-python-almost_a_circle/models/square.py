@@ -39,3 +39,7 @@ class Square(Rectangle):
         else:
             for arg in keywords:
                 setattr(self, arg, keywords.get(arg))
+
+    def to_dictionary(self):
+        return {'id': self.id, 'size': self.size,
+                'x': self.x, 'y': self.y}
