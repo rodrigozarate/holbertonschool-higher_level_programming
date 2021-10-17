@@ -29,3 +29,11 @@ class Base:
                 for objects in list_objs:
                     dictionary.append(objects.to_dictionary())
             file.write(cls.to_json_string(dictionary))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if not json_string:
+            return "[]"
+        return json.loads(json_string)
+
+
