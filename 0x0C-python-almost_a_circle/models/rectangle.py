@@ -75,7 +75,7 @@ class Rectangle(Base):
                         self.__x, self.__y,
                         self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **keywords):
         i = 0
         if args:
             while i < len(args):
@@ -90,3 +90,9 @@ class Rectangle(Base):
                 if i == 4:
                     self.y = args[i]
                 i += 1
+        else:
+            for arg in keywords:
+                setattr(self, arg, keywords.get(arg))
+
+    def to_dictionary(self):
+        return self.__dict__
