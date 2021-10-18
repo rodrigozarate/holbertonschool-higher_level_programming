@@ -53,3 +53,7 @@ class Base:
                         in cls.from_json_string(file.read())]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def reset_nb_objects():
+        Base._Base__nb_objects = 0
