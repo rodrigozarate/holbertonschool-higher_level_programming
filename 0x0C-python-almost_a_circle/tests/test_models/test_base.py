@@ -48,7 +48,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual([], Base.from_json_string(None))
 
     def test_from_json_string(self):
-        """Tests normal from_json_string"""
         json_str = '[{"id": 1, "width": 2, "height": 3, "x": 4, "y": 5}, \
                      {"id": 5, "width": 4, "height": 3, "x": 2, "y": 1}]'
         json_l = Base.from_json_string(json_str)
