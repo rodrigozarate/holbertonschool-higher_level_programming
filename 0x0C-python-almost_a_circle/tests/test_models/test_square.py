@@ -8,15 +8,15 @@ class TestSquare(unittest.TestCase):
     """ Test cases for class Squaree """
     def test_id_default(self):
         s = Square(7, 4)
-        self.assertEqual(s.id, 1)
+        self.assertEqual(s.id, 6)
 
     def test_size(self):
         s_size = Square(7)
-        self.assertEqual(s_size.size, 49)
+        self.assertEqual(s_size.size, 7)
 
     def test_width_height_x(self):
         s_cero = Square(7, 4)
-        self.assertEqual(s_cero.zise, 7)
+        self.assertEqual(s_cero.size, 7)
         self.assertEqual(s_cero.x, 4)
 
     def test_x_y_default(self):
@@ -46,7 +46,7 @@ class TestSquare(unittest.TestCase):
 
     def test_area_success(self):
         s_area = Square(7, 0, 0)
-        self.assertEqual(r_area.area(), 49)
+        self.assertEqual(s_area.area(), 49)
 
     def test_area_fail(self):
         s_area = Square(7, 0, 0)
