@@ -2,6 +2,7 @@
 """ Model rectangle """
 from .base import Base
 
+
 class Rectangle(Base):
     """ Class Rectangle inherits from Base """
 
@@ -20,7 +21,7 @@ class Rectangle(Base):
     def width(self, value):
         if not type(value) is int:
             raise TypeError("width must be an integer")
-        if value <=0:
+        if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
 
@@ -32,7 +33,7 @@ class Rectangle(Base):
     def height(self, value):
         if not type(value) is int:
             raise TypeError("height must be an integer")
-        if value <=0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -67,13 +68,13 @@ class Rectangle(Base):
     def display(self):
         if self.__y > 0:
             print(("\n" * self.__y)[:-1])
-        print(((" " * self.__x  + self.__width * "#" + "\n") 
+        print(((" " * self.__x + self.__width * "#" + "\n") 
               * self.__height)[:-1])
 
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                        self.__x, self.__y,
-                        self.__width, self.__height))
+                self.__x, self.__y,
+                self.__width, self.__height))
 
     def update(self, *args, **keywords):
         i = 0
