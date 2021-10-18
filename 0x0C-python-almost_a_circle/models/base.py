@@ -9,7 +9,7 @@ class Base:
 
     def __init__(self, id=None):
         """ definition of instance atributes """
-        if not id == None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -53,3 +53,6 @@ class Base:
                         in cls.from_json_string(file.read())]
         except FileNotFoundError:
             return []
+
+    def reset_nb_objects():
+        Base._Base__nb_objects = 0
