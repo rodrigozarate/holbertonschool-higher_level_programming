@@ -62,9 +62,8 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    """ public method AREA """
     def area(self):
-        return self.height * self.width
+        return self.__height * self.__width
 
     def display(self):
         if self.__y > 0:
@@ -97,5 +96,5 @@ class Rectangle(Base):
                 setattr(self, arg, keywords.get(arg))
 
     def to_dictionary(self):
-        return {'x': self.x, 'y': self.y, 'id': self.id,
-                'height': self.height, 'width': self.width}
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
