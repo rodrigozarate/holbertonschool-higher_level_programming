@@ -8,6 +8,9 @@ import json
 class TestBase(unittest.TestCase):
     """ Unittest for Base Class """
 
+    def setUp(self):
+        Base._nb_objects = 0
+
     def test_set_id_none(self):
         b_cero = Base()
         self.assertEqual(b_cero.id, 2)
