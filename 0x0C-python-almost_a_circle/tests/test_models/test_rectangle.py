@@ -2,10 +2,22 @@
 """ Test set for rectangle Class """
 import unittest
 from models.rectangle import Rectangle
+import os
 
 
 class TestRectangle(unittest.TestCase):
     """ Test cases for class rectangle """
+
+    def setUp(self):
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """ Clean test files """
+        if os.path.exists("Rectangle.json"):
+            os.remove("Rectangle.json")
+        if os.path.exists("Rectangle.csv"):
+            os.remove("Rectangle.csv")
+
     def test_id_default(self):
         r = Rectangle(7, 4)
         self.assertEqual(r.id, 1)
@@ -35,6 +47,10 @@ class TestRectangle(unittest.TestCase):
     def test_type_error_string_heigth(self):
         with self.assertRaises(TypeError):
             r_string = Rectangle(7, "four")
+
+    def test_type_error_list(self):
+        with self.assertRaises(TypeError):
+            r_list = Rectangle([7, 4], 28, 0, 0)
 
     def test_area_success(self):
         r_area = Rectangle(7, 4, 0, 0, 28)
