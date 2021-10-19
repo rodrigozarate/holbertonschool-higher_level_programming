@@ -37,6 +37,20 @@ class TestBase(unittest.TestCase):
         b74 = Base()
         self.assertNotEqual(b74.id, 74)
 
+    def test_to_json_empty(self):
+        json_str = Base.to_json_string(None)
+        self.assertEqual(json_str, "[]")
+
+        json_str = Base.to_json_string([])
+        self.assertEqual(json_str, "[]")
+
+    def test_from_json_empty(self):
+        json_str = Base.from_json_string(None)
+        self.assertEqual(json_str, [])
+
+        json_str = Base.from_json_string([])
+        self.assertEqual(json_str, [])
+
     def test_private(self):
         b_private = Base(3)
         with self.assertRaises(AttributeError):
