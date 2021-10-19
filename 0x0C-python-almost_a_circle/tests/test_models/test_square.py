@@ -1,14 +1,26 @@
 #!/usr/bin/python3
 """ Test set for Square Class """
 import unittest
+from models.base import Base
 from models.square import Square
-
+import os
 
 class TestSquare(unittest.TestCase):
-    """ Test cases for class Squaree """
+    """ Test cases for class Square """
+
+    def setUp(self):
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """ Clean test files """
+        if os.path.exists("Square.json"):
+            os.remove("Square.json")
+        if os.path.exists("Square.csv"):
+            os.remove("Square.csv")
+
     def test_id_default(self):
         s = Square(7, 4)
-        self.assertEqual(s.id, 6)
+        self.assertEqual(s.id, 1)
 
     def test_size(self):
         s_size = Square(7)
