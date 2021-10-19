@@ -16,10 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ get width """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ set width """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -28,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ get height """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ set height """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -63,20 +67,24 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ return rectangle area """
         return self.__height * self.__width
 
     def display(self):
+        """ print rectangle """
         if self.__y > 0:
             print(("\n" * self.__y)[:-1])
         print(((" " * self.__x + self.__width * "#" + "\n") *
               self.__height)[:-1])
 
     def __str__(self):
+        """ return standard print of class """
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.__x, self.__y,
                 self.__width, self.__height))
 
     def update(self, *args, **keywords):
+        """ update instance of rectangle """
         i = 0
         if args:
             while i < len(args):
@@ -96,5 +104,6 @@ class Rectangle(Base):
                 setattr(self, arg, keywords.get(arg))
 
     def to_dictionary(self):
+        """ return dictionary of object """
         return {'x': self.__x, 'y': self.__y, 'id': self.id,
                 'height': self.__height, 'width': self.__width}
