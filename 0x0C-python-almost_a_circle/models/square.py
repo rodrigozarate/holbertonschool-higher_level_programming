@@ -24,6 +24,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **keywords):
+        """ update square with keyword args """
         i = 0
         if args:
             while i < len(args):
@@ -41,5 +42,6 @@ class Square(Rectangle):
                 setattr(self, arg, keywords.get(arg))
 
     def to_dictionary(self):
+        """ dictionary definition """
         return {'id': self.id, 'size': self.size,
                 'x': self.x, 'y': self.y}
