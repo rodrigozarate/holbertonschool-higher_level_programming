@@ -68,8 +68,8 @@ class Rectangle(Base):
     def display(self):
         if self.__y > 0:
             print(("\n" * self.__y)[:-1])
-        print(((" " * self.__x + self.__width * "#" + "\n") 
-              * self.__height)[:-1])
+        print(((" " * self.__x + self.__width * "#" + "\n") *
+              self.__height)[:-1])
 
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
