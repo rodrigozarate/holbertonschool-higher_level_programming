@@ -3,17 +3,25 @@
 import unittest
 from models.base import Base
 import json
+import os
 
 
 class TestBase(unittest.TestCase):
     """ Unittest for Base Class """
 
     def setUp(self):
-        Base._nb_objects = 0
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """ Clean test files """
+        if os.path.exists("Base.json"):
+            os.remove("Base.json")
+        if os.path.exists("Base.csv"):
+            os.remove("Base.csv")
 
     def test_set_id_none(self):
         b_cero = Base()
-        self.assertEqual(b_cero.id, 2)
+        self.assertEqual(b_cero.id, 1)
 
     def test_set_id_none_fail(self):
         b_one = Base()
