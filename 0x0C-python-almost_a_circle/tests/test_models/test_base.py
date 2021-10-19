@@ -58,6 +58,30 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(b_private.__nb_objects)
 
+    def test_03_create_rquare_success(self):
+        new_obj1 = Square(5)
+        dictionary = {"size": 10}
+        new_obj2 = new_obj1.create(**dictionary)
+        self.assertIsInstance(new_obj2, Square)
+
+    def test_03_create_rectangle_success(self):
+        new_obj1 = Rectangle(5, 2)
+        dictionary = {"width": 10, "height": 5, "x": 2, "y": 2}
+        new_obj2 = new_obj1.create(**dictionary)
+        self.assertIsInstance(new_obj2, Rectangle)
+
+    def test_03_create_rquare_fail(self):
+        new_obj1 = Square(5)
+        dictionary = {"size": 10}
+        new_obj2 = new_obj1.create(**dictionary)
+        self.assertIsNot(new_obj2, Rectangle)
+
+    def test_03_create_rectangle_fail(self):
+        new_obj1 = Rectangle(5, 2)
+        dictionary = {"width": 10, "height": 5, "x": 2, "y": 2}
+        new_obj2 = new_obj1.create(**dictionary)
+        self.assertIsNot(new_obj2, Square)
+
     def test_to_json_string(self):
         Base._Base__nb_objects = 0
         b1 = {"id": 1, "width": 2, "height": 3, "x": 4, "y": 5}
