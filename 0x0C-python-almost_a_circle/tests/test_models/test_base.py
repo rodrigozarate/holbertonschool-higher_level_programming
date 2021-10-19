@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ Unittest for Base Class """
 import unittest
+from models.base import Base
 import json
-from models import base
-Base = base.Base
 
 
 class TestBase(unittest.TestCase):
@@ -55,8 +54,7 @@ class TestBase(unittest.TestCase):
         self.assertTrue(type(json_l[1]) is dict)
         self.assertTrue(type(json_l) is list)
         self.assertEqual(len(json_l), 2)
-        self.assertEqual(json_l[0], {"id": 1, "width": 2, "height": 3, 
+        self.assertEqual(json_l[0], {"id": 1, "width": 2, "height": 3,
                                      "x": 4, "y": 5})
         self.assertEqual(json_l[1], {"id": 5, "width": 4, "height": 3,
                                      "x": 2, "y": 1})
-
