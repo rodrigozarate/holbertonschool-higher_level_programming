@@ -34,6 +34,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r_one.x, 0)
         self.assertEqual(r_one.y, 0)
 
+    def test_instance(self):
+        r_instance = Rectangle(7, 4)
+
+        self.assertIsInstance(r_instance, Rectangle)
+        self.assertIsInstance(r_instance, Base)
+        self.assertTrue(issubclass(type(r_instance), Base))
+        self.assertTrue(issubclass(type(r_instance), Rectangle))
+        self.assertTrue(type(r_instance) == Rectangle)
+        self.assertFalse(type(r_instance) == Base)
+
     def test_value_error_width(self):
         with self.assertRaises(ValueError):
             r_negative_w = Rectangle(-7, 4)
