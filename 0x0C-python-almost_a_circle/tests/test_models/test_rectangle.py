@@ -71,3 +71,23 @@ class TestRectangle(unittest.TestCase):
     def test_area_fail(self):
         r_area = Rectangle(7, 7, 0, 0, 28)
         self.assertNotEqual(r_area.area(), 28)
+
+    def test_wrong_type_04(self):
+        with self.assertRaises(TypeError):
+            r_wrong_type = Rectangle(1, 2, 3, "4")
+
+    def test_all_data(self):
+        r_all_data = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r_all_data.id, 5)
+
+    def test_cero_param_w(self):
+        with self.assertRaises(ValueError):
+            r_cero_width = Rectangle(0, 2)
+
+    def test_cero_param_h(self):
+        with self.assertRaises(ValueError):
+            r_cero_height = Rectangle(1, 0)
+
+    def test_value_error_y(self):
+        with self.assertRaises(ValueError):
+            r_value_error_y =  Rectangle(1, 2, 3, -4) 
