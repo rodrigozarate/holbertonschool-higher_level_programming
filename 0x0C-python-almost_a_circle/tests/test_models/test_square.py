@@ -38,6 +38,25 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s_one.x, 7)
         self.assertEqual(s_one.y, 4)
 
+    def test_wrong_type_y(self):
+        with self.assertRaises(ValueError):
+            s_wrong_type_y = Square(1, 2, "3")
+
+    def test_all_data_ok(self):
+        s_all_data_ok = Square(1, 2, 3, 4)
+        self.assertEqual(s_all_data_ok.size, 1)
+        self.assertEqual(s_all_data_ok.x, 2)
+        self.assertEqual(s_all_data_ok.y, 3)
+        self.assertEqual(s_all_data_ok.id, 4)
+
+    def test_wrong_sign_y(self):
+        with self.assertRaises(ValueError):
+            s_wrong_sign_y =  Square(1, 2, -3)
+
+    def test_zero_size(self):
+        with self.assertRaises(ValueError):
+            s_zero_size =  Square(0)
+
     def test_instance(self):
         s_instance = Square(10, 12)
 
