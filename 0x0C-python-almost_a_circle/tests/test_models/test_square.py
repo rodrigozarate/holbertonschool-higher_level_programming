@@ -39,7 +39,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s_one.y, 4)
 
     def test_wrong_type_y(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             s_wrong_type_y = Square(1, 2, "3")
 
     def test_all_data_ok(self):
