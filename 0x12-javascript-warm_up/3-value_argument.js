@@ -7,5 +7,5 @@ process.argv.forEach((element, index) => {
 if (argsCount <= 2) {
   console.log(givenArg);
 } else {
-  console.log(arguments[2]);
+  console.log(process.argv[2]);
 }
