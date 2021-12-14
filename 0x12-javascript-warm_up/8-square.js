@@ -9,5 +9,5 @@ if (squareSize) {
     console.log(pattern);
   }
 } else {
-    console.log('Missing size');
+  console.log('Missing size');
 }
