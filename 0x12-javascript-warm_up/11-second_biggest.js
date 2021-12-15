@@ -6,6 +6,6 @@ process.argv.forEach((element, index) => {
 if (argsCount <= 3) {
   console.log('0');
 } else {
-  process.argv.sort();
+  process.argv.sort((a, b) => a - b);
   console.log(process.argv[argsCount - 2]);
 }
