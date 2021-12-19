@@ -4,7 +4,6 @@
 import sys
 import MySQLdb
 
-
 def main():
     connection = MySQLdb.connect(
         host="localhost",
@@ -13,10 +12,10 @@ def main():
         passwd=sys.argv[2],
         db=sys.argv[3],
         charset="utf8"
-    )
+        )
 
     holder = connection.cursor()
-    query = "SELECT id,name FROM states WHERE name LIKE 'N%' ORDER by id ASC"
+    query = "SELECT id,name FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     holder.execute(query)
     rows = holder.fetchall()
     for row in rows:
