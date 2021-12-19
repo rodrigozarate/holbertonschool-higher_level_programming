@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     holder = connection.cursor()
     userInput = sys.argv[4]
-    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC" \
+    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC"
             .format(userInput)
     holder.execute(query)
     rows = holder.fetchall()
