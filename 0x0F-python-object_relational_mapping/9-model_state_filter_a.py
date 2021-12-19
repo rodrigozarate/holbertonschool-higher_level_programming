@@ -12,7 +12,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    aSates = (session.query(State).filter(State.name.like("%a%")).
+    aStates = (session.query(State).filter(State.name.like("%a%")).
              order_by(State.id).all())
     for state in aStates:
         print("{}: {}".format(state.id, state.name))
