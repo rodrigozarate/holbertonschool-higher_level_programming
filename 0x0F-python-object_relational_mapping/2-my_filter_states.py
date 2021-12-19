@@ -14,11 +14,11 @@ if __name__ == "__main__":
         )
 
     holder = connection.cursor()
-    userInput = sys.argv[4]
-    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(userInput)
+    query = "SELECT * FROM states ORDER BY id ASC"
     holder.execute(query)
     rows = holder.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
     holder.close()
     connection.close()
