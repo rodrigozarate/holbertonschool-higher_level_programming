@@ -22,8 +22,8 @@ def main():
     for row in rows:
         auxvar += row[0] + ", "
     print(auxvar[0:-2:])
-    cur.close()
-    conn.close()
+    holder.close()
+    connection.close()
 
 
 if __name__ == "__main__":
