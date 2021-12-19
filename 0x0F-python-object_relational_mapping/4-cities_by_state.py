@@ -16,7 +16,7 @@ def main():
         )
 
     holder = connection.cursor()
-    query = "SELECT citiesid, cities.name, states.name\
+    query = "SELECT cities.id, cities.name, states.name\
     FROM cities INNER JOIN states ON cities.state_id = states.id"
     holder.execute(query)
     rows = holder.fetchall()
