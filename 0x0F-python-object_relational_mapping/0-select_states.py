@@ -16,7 +16,7 @@ def main():
     )
 
     holder = connection.cursor()
-    query = "SELECT id,name FROM states ORDER by id ASC"
+    query = "SELECT * FROM states ORDER BY id ASC"
     holder.execute(query)
     rows = holder.fetchall()
     for row in rows:
