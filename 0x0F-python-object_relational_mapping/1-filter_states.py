@@ -15,7 +15,7 @@ if __name__ == "__main__":
         )
 
     holder = connection.cursor()
-    query = "SELECT id,name FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
     holder.execute(query)
     rows = holder.fetchall()
     for row in rows:
