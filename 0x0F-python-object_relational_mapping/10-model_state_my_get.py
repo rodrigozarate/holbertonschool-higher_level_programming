@@ -17,7 +17,7 @@ if __name__ == "__main__":
               .order_by(State.id))
     found = 0
     for state in states:
-        found += 1 
+        found += 1
         print("{}".format(state.id, state.name))
     if found == 0:
         print("Not found")
