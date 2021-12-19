@@ -13,11 +13,11 @@ def main():
         passwd=sys.argv[2],
         db=sys.argv[3],
         charset="utf8"
-    )
+        )
 
     holder = connection.cursor()
-    query = """SELECT citiesid, cities.name, states.name
-            FROM cities INNER JOIN states ON cities.state_id = states.id"""
+    query = "SELECT citiesid, cities.name, states.name\
+    FROM cities INNER JOIN states ON cities.state_id = states.id"
     holder.execute(query)
     rows = holder.fetchall()
     for row in rows:
