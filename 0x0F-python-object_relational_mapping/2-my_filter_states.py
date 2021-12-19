@@ -12,11 +12,11 @@ if __name__ == "__main__":
         passwd=sys.argv[2],
         db=sys.argv[3],
         charset="utf8"
-    )
+        )
 
     holder = connection.cursor()
     userInput = sys.argv[4]
-    query = "SELECT id,name FROM states WHERE name = '{:s}'\
+    query = "SELECT id,name FROM states WHERE name = '{:s}' \
             ORDER by id ASC".format(userInput)
     holder.execute(query)
     rows = holder.fetchall()
