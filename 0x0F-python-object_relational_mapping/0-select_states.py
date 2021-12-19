@@ -19,5 +19,5 @@ if __name__ == "__main__":
     rows = holder.fetchall()
     for row in rows:
         print(row)
-    cur.close()
-    db.close()
+    holder.close()
+    connection.close()
