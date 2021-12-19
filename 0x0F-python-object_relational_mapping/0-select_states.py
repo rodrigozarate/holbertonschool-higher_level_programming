@@ -16,8 +16,7 @@ if __name__ == "__main__":
     )
 
     holder = connection.cursor()
-    query = "SELECT * FROM states ORDER BY id ASC"
-    holder.execute(query)
+    holder.execute("SELECT * FROM states ORDER BY id ASC")
     rows = holder.fetchall()
     for row in rows:
         print(row)
