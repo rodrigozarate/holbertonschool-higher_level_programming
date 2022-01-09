@@ -1,2 +1,3 @@
 #!/bin/bash
-# Comment
+# Send delete request
+curl -sX DELETE "$1"
