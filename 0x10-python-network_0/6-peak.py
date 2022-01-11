@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Mod to find peak """
+""" Module to find a peak in a list of integers """
 
 
 def find_peak(list_of_integers):
-    """ Get the peak by comparison """
+    """ Get the peak by comparison in a list of integers """
     elements = len(list_of_integers)
     if list_of_integers = []:
         return None
