@@ -1,16 +1,11 @@
 #!/usr/bin/python3
-"""
-Module to find a peak in a list of integers
-"""
+""" Module to find a peak in a list of integers """
 
 
 def find_peak(list_of_integers):
-    """
-        Get the peak by comparison in a list of integers
-  
-    """
+    """ Get the peak by comparison in a list of integers """
     elements = len(list_of_integers)
-    if list_of_integers = []:
+    if list_of_integers == []:
         return None
     if elements == 1:
         return list_of_integers[0]
