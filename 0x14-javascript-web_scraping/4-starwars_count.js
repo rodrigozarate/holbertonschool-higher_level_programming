@@ -9,8 +9,10 @@ request.get(url, function (err, response, body) {
   }
   const data = JSON.parse(body);
   for (let i = 0; data.results[i] !== undefined; i++) {
-    if (data.results[i].characters.includes('https://swapi-api.hbtn.io/api/films/18/')) {
-      count++;
+    for (let j = 0; data.results[i].characters !== undefined; j++) {
+      if (data.results[i].characters.includes(String('18'))) {
+        count++;
+      }
     }
   }
   console.log(count);
