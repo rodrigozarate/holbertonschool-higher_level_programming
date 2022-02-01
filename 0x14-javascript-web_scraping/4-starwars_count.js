@@ -7,10 +7,9 @@ request.get(url, function (err, response, body) {
   if (err) {
     console.log(err);
   }
-  const data = JSON.parse(body);
-  for (let i = 0; data.results[i] !== undefined; i++) {
-    for (let j = 0; data.results[i].characters !== undefined; j++) {
-      if (data.results[i].characters.includes(String('/18/'))) {
+  for (const movie of JSON.parse(body).results) {
+    for (const character of movie.characters) {
+      if (character.includes(String('/18/'))) {
         count++;
       }
     }
