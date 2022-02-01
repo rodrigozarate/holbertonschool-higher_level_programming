@@ -10,7 +10,7 @@ request.get(url, function (err, response, body) {
   const data = JSON.parse(body);
   for (let i = 0; data.results[i] !== undefined; i++) {
     for (let j = 0; data.results[i].characters !== undefined; j++) {
-      if (data.results[i].characters.includes(String('18'))) {
+      if (data.results[i].characters.includes(String('/18/'))) {
         count++;
       }
     }
